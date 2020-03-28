@@ -27,8 +27,8 @@
     var mung1 = new Date(2020, 0, 25);
     var mungHienTai = new Date();
 
-    var soMung = Math.floor((Date.UTC(mungHienTai.getFullYear(), mungHienTai.getMonth(), mungHienTai.getDate()) - Date.UTC(mung1.getFullYear(), mung1.getMonth(), mung1.getDate()) +1 ) /(1000 * 60 * 60 * 24));
-
+    var soMung = Math.floor((Date.UTC(mungHienTai.getFullYear(), mungHienTai.getMonth(), mungHienTai.getDate()) - Date.UTC(mung1.getFullYear(), mung1.getMonth(), mung1.getDate()) ) /(1000 * 60 * 60 * 24)) + 1;
+    
     document.getElementById("mung").innerHTML = soMung;
 
 </script>
