@@ -6,17 +6,29 @@
     <title>Hello Bulma!</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <style>
+        .container {
+            font-size: 3rem;
+            padding-top: 10rem;
+            text-align: center;
+        }
+    </style>
   </head>
   <body>
-  <section class="section">
     <div class="container">
-      <h1 class="title">
-        Hello World
-      </h1>
-      <p class="subtitle">
-        My first website with <strong>Bulma</strong>!
-      </p>
-    </div>
-  </section>
+        <p>Chào mừng bạn đến với kỳ nghỉ Tết dài nhất lịch sử và </p>
+        <div class="notification">
+          Hiện tại đang là <strong>mùng</strong> <strong id="mung">mùng</strong> "Tết"...
+        </div>
+      </div>
   </body>
 </html>
+<script>
+    var mung1 = new Date(2020, 0, 25);
+    var mungHienTai = new Date();
+
+    var soMung = Math.floor((Date.UTC(mungHienTai.getFullYear(), mungHienTai.getMonth(), mungHienTai.getDate()) - Date.UTC(mung1.getFullYear(), mung1.getMonth(), mung1.getDate()) ) /(1000 * 60 * 60 * 24));
+
+    document.getElementById("mung").innerHTML = soMung;
+
+</script>
